@@ -108,7 +108,7 @@ const App = () => {
       console.error('Error saving image:', error);
     }
   };
-
+  
   const translationX = useSharedValue(25);
   const translationY = useSharedValue(150);
   const scale = useSharedValue(1);
@@ -126,10 +126,10 @@ const App = () => {
     })
     .onTouchesMove(e => {
       // console.log('touch move', e);
-      const touch = e.allTouches[0]; // Assuming only one touch for simplicity
+      const touch = e.allTouches[0]; 
       const {absoluteX, absoluteY} = touch;
-      translationX.value = absoluteX; // Adjust the scale factor as needed
-      translationY.value = absoluteY; // Adjust the scale factor as needed
+      translationX.value = absoluteX; 
+      translationY.value = absoluteY; 
     });
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [
